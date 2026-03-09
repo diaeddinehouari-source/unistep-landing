@@ -225,6 +225,120 @@ section {
     margin: 0 auto;
 }
 
+/* ===== قسم المشكلة والحل ===== */
+.problem-solution {
+    background: white;
+    padding: 80px 0;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.problem-card {
+    background: #f8f9fa;
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    border: 1px solid #eee;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(13, 71, 161, 0.1);
+}
+
+.problem-card i {
+    font-size: 3rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+.problem-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.problem-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.solution-header {
+    text-align: center;
+    margin: 40px 0 30px;
+}
+
+.solution-header h3 {
+    font-size: 2.2rem;
+    color: #0D47A1;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.solution-header h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #1976D2;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.solution-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s;
+    border: 1px solid #eee;
+}
+
+.solution-card:hover {
+    background: white;
+    box-shadow: 0 8px 20px rgba(13, 71, 161, 0.1);
+    transform: translateX(-5px);
+}
+
+.solution-icon i {
+    font-size: 2.2rem;
+    color: #1976D2;
+}
+
+.solution-content h4 {
+    font-size: 1.3rem;
+    color: #0D47A1;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.solution-content p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 /* ===== قسم المميزات ===== */
 .features {
     background: white;
