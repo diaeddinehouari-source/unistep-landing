@@ -15,19 +15,28 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="navbar">
+    <!-- Animated Background Blobs -->
+    <div class="bg-shapes">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="navbar" id="navbar">
         <div class="container">
             <div class="logo">
                 <a href="#home">UniStep</a>
             </div>
             <nav class="nav-menu" id="nav-menu">
+                <div class="close-menu" id="close-menu"><i class="fas fa-times"></i></div>
                 <ul>
-                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#home" class="active">الرئيسية</a></li>
                     <li><a href="#problem-solution">المشكلة والحل</a></li>
                     <li><a href="#features">المميزات</a></li>
                     <li><a href="#how-it-works">طريقة العمل</a></li>
@@ -36,7 +45,7 @@
                 </ul>
             </nav>
             <div class="nav-buttons">
-                <a href="#download" class="btn btn-sm">حمّل التطبيق</a>
+                <a href="#download" class="btn btn-primary btn-sm">حمّل التطبيق</a>
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -44,72 +53,77 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>لأننا نؤمن أن زميلك <span>قد يكون أفضل مدرس</span></h1>
-                <p>منصة جامعة غليزان لتبادل المعرفة بين الطلاب. اشرح لزملائك المواد التي تتقنها، واستفد من شروحاتهم، واكسب دخلاً إضافياً.</p>
-                <div class="hero-buttons">
-                    <a href="#download" class="btn btn-primary"><i class="fas fa-download"></i> حمّل التطبيق</a>
-                    <a href="#problem-solution" class="btn btn-outline"><i class="fas fa-play"></i> اكتشف المزيد</a>
+                <div class="hero-badge">مرحباً بك في مجتمع المعرفة</div>
+                <h1 class="reveal">لأننا نؤمن أن زميلك <span>قد يكون أفضل مدرس</span></h1>
+                <p class="reveal reveal-delay-1">منصة جامعة غليزان لتبادل المعرفة بين الطلاب. اشرح لزملائك المواد التي تتقنها، واستفد من شروحاتهم، واكسب دخلاً إضافياً.</p>
+                <div class="hero-buttons reveal reveal-delay-2">
+                    <a href="#download" class="btn btn-primary btn-large"><i class="fas fa-download"></i> حمّل التطبيق</a>
+                    <a href="#problem-solution" class="btn btn-outline btn-large"><i class="fas fa-play"></i> اكتشف المزيد</a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image reveal reveal-delay-3">
                 <img src="images/hero-app.png" alt="UniStep App" loading="lazy">
             </div>
         </div>
     </section>
 
+    <!-- Problem & Solution Section -->
     <section id="problem-solution" class="problem-solution">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>المشكلة التي نواجهها جميعًا</h2>
-                <p>التحديات الحقيقية في الحياة الجامعية اليوم</p>
+                <p>التحديات الحقيقية في الحياة الجامعية اليوم وتحصيل المعرفة للجميع</p>
             </div>
             <div class="problem-grid">
-                <div class="problem-card">
-                    <i class="fas fa-clock"></i>
+                <div class="problem-card reveal">
+                    <div class="icon-wrapper"><i class="fas fa-clock"></i></div>
                     <h3>وقت وجهد مهدر</h3>
                     <p>كم مرة أضعت وقتًا في البحث عن طريقة لتفهم المقياس او درس ما؟</p>
                 </div>
-                <div class="problem-card">
-                    <i class="fas fa-chart-line"></i>
+                <div class="problem-card reveal reveal-delay-1">
+                    <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
                     <h3>فجوة أكاديمية</h3>
                     <p>مواد صعبة تحتاج إلى شرح مبسط من شخص يمر بنفس تجربتك، لكن لا تجد من يساعدك.</p>
                 </div>
-                <div class="problem-card">
-                    <i class="fas fa-wallet"></i>
+                <div class="problem-card reveal reveal-delay-2">
+                    <div class="icon-wrapper"><i class="fas fa-wallet"></i></div>
                     <h3>ضغوط مالية</h3>
                     <p>الدروس الخصوصية التقليدية مكلفة، ولا توجد وسيلة مرنة لكسب دخل إضافي أثناء الدراسة.</p>
                 </div>
             </div>
-            <div class="solution-header">
+
+            <div class="solution-header reveal">
                 <h3>كيف يحلها UniStep؟</h3>
             </div>
+            
             <div class="solution-grid">
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="solution-card reveal">
+                    <div class="icon-wrapper"><i class="fas fa-check-circle"></i></div>
                     <div class="solution-content">
                         <h4>منصة موثوقة</h4>
                         <p>جميع المستخدمين من طلاب جامعة غليزان، يمكنك التحقق من هويتهم والتواصل معهم بثقة.</p>
                     </div>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <div class="solution-card reveal reveal-delay-1">
+                    <div class="icon-wrapper"><i class="fas fa-hand-holding-usd"></i></div>
                     <div class="solution-content">
                         <h4>دخل إضافي للجميع</h4>
                         <p>إذا كنت متمكنًا في مادة ما، اشرحها لزملائك واكسب مقابلًا ماديًا يناسب وقتك وجهدك.</p>
                     </div>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="solution-card reveal reveal-delay-2">
+                    <div class="icon-wrapper"><i class="fas fa-mobile-alt"></i></div>
                     <div class="solution-content">
                         <h4>سهولة الاستخدام</h4>
                         <p>حجز درس أو عرض شرح يتم بخطوات بسيطة، مع تواصل مباشر.</p>
                     </div>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-icon"><i class="fas fa-star"></i></div>
+                <div class="solution-card reveal reveal-delay-3">
+                    <div class="icon-wrapper"><i class="fas fa-star"></i></div>
                     <div class="solution-content">
                         <h4>تقييمات شفافة</h4>
                         <p>تقييمات حقيقية من زملائك تساعدك في اختيار أفضل شرح وأفضل مدرس.</p>
@@ -119,92 +133,117 @@
         </div>
     </section>
 
+    <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <div class="section-header">
-                <h2>مميزات UniStep</h2>
-                <p>لأن التعاون بين الزملاء يخلق جيلاً أكاديمياً أقوى</p>
+            <div class="section-header reveal">
+                <h2>مميزات تقدمها لك UniStep</h2>
+                <p>لأن التعاون بين الزملاء يخلق جيلاً أكاديمياً أقوى وأكثر نجاحاً</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card"><i class="fas fa-user-graduate"></i><h3>أنت طالب ومعلم</h3><p>في UniStep، يمكنك أن تتعلم من زملائك، وفي الوقت نفسه تشرح المواد التي تجيدها، مما يتيح لك فرصة لتعزيز فهمك وبناء سمعتك الأكاديمية.</p></div>
-                <div class="feature-card"><i class="fas fa-money-bill-wave"></i><h3>دخل إضافي</h3><p>عندما تشرح لزملائك، تحصل على مقابل مادي.</p></div>
-                <div class="feature-card"><i class="fas fa-users"></i><h3>مجتمع جامعي</h3><p>تواصل مع طلاب من كليتك وتخصصك، يفهمون صعوباتك الأكاديمية لأنهم يمرون بنفس التجربة.</p></div>
-                <div class="feature-card"><i class="fas fa-wallet"></i><h3>محفظة رقمية</h3><p>شحن رصيد، عمولات شفافة، وسجل معاملات آمن – كل ذلك لضمان الثقة بين الطرفين.</p></div>
-                <div class="feature-card"><i class="fab fa-whatsapp"></i><h3>تواصل مباشر</h3><p>بعد الحجز، تواصل مع زميلك لتنظيم اللقاء بكل سهولة.</p></div>
-                <div class="feature-card"><i class="fas fa-star"></i><h3>تقييمات وسمعة</h3><p>قيّم تجربتك مع زميلك، وابنِ سمعة أكاديمية تزيد من ثقة الآخرين بك.</p></div>
+                <div class="feature-card reveal"><div class="icon-wrapper"><i class="fas fa-user-graduate"></i></div><h3>أنت طالب ومعلم</h3><p>في UniStep، يمكنك أن تتعلم من زملائك، وفي الوقت نفسه تشرح المواد التي تجيدها.</p></div>
+                <div class="feature-card reveal reveal-delay-1"><div class="icon-wrapper"><i class="fas fa-money-bill-wave"></i></div><h3>دخل إضافي</h3><p>عندما تشرح لزملائك، تحصل على مقابل مادي فوري ويناسبك.</p></div>
+                <div class="feature-card reveal reveal-delay-2"><div class="icon-wrapper"><i class="fas fa-users"></i></div><h3>مجتمع جامعي</h3><p>تواصل مع طلاب من كليتك وتخصصك، يفهمون صعوباتك الأكاديمية لأنهم يمرون بنفس التجربة.</p></div>
+                <div class="feature-card reveal reveal-delay-3"><div class="icon-wrapper"><i class="fas fa-wallet"></i></div><h3>محفظة رقمية</h3><p>شحن رصيد، عمولات شفافة، وسجل معاملات آمن – كل ذلك لضمان الثقة بين الطرفين.</p></div>
+                <div class="feature-card reveal reveal-delay-4"><div class="icon-wrapper"><i class="fab fa-whatsapp"></i></div><h3>تواصل مباشر</h3><p>بعد الحجز، تواصل مع زميلك لتنظيم اللقاء بكل سهولة ومرونة.</p></div>
+                <div class="feature-card reveal reveal-delay-1"><div class="icon-wrapper"><i class="fas fa-star"></i></div><h3>تقييمات وسمعة</h3><p>قيّم تجربتك مع زميلك، وابنِ سمعة أكاديمية تزيد من ثقة الآخرين بك.</p></div>
             </div>
         </div>
     </section>
 
+    <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>كيف تعمل المنصة؟</h2>
-                <p>سواء أردت الشرح أو الاستفادة من شروحات زملائك، الخطوات بسيطة</p>
+                <p>سواء أردت الشرح أو الاستفادة من شروحات زملائك، الخطوات بسيطة جداً</p>
             </div>
             <div class="steps">
-                <div class="step"><div class="step-number">1</div><i class="fas fa-download"></i><h3>حمّل التطبيق</h3><p>أنشئ حسابك باستخدام بريدك الإلكتروني الشخصي.</p></div>
-                <div class="step"><div class="step-number">2</div><i class="fas fa-search"></i><h3>ابحث عن شرح أو اعرض شرحك</h3><p>تصفح المواد الدراسية المتاحة، أو أضف مادة تود شرحها لزملائك.</p></div>
-                <div class="step"><div class="step-number">3</div><i class="fas fa-calendar-check"></i><h3>احجز وتواصل</h3><p>اتفق على الوقت المناسب وتواصل مع زميلك.</p></div>
-                <div class="step"><div class="step-number">4</div><i class="fas fa-star"></i><h3>قيّم واستفد</h3><p>بعد اللقاء، قيّم تجربتك لتبني مجتمعاً أكاديمياً موثوقاً.</p></div>
+                <div class="step reveal">
+                    <div class="step-number"><i class="fas fa-download" style="font-size:1.5rem"></i></div>
+                    <h3>حمّل التطبيق</h3>
+                    <p>أنشئ حسابك باستخدام بريدك الإلكتروني الشخصي وابدأ.</p>
+                </div>
+                <div class="step reveal reveal-delay-1">
+                    <div class="step-number"><i class="fas fa-search" style="font-size:1.5rem"></i></div>
+                    <h3>ابحث أو اعرض</h3>
+                    <p>تصفح المواد الدراسية المتاحة، أو أضف مادة تود شرحها لزملائك.</p>
+                </div>
+                <div class="step reveal reveal-delay-2">
+                    <div class="step-number"><i class="fas fa-calendar-check" style="font-size:1.5rem"></i></div>
+                    <h3>احجز وتواصل</h3>
+                    <p>اتفق على الوقت المناسب وتواصل مع زميلك عبر المنصة.</p>
+                </div>
+                <div class="step reveal reveal-delay-3">
+                    <div class="step-number"><i class="fas fa-star" style="font-size:1.5rem"></i></div>
+                    <h3>قيّم واستفد</h3>
+                    <p>بعد اللقاء، قيّم تجربتك لتبني مجتمعاً أكاديمياً موثوقاً.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>آراء الطلاب</h2>
-                <p>تجارب حقيقية من مستخدمي UniStep في جامعة غليزان</p>
+                <p>تجارب حقيقية من مستخدمي تطبيق UniStep في جامعة غليزان</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote"><i class="fas fa-quote-right"></i></div>
+                <div class="testimonial-card reveal">
+                    <i class="fas fa-quote-right quote"></i>
                     <p class="testimonial-text">"كنت أواجه صعوبة في مادة الإحصاء، حتى وجدت زميلاً في نفس الكلية يشرحها. الحمد لله، فهمت المادة وتفوقت في الامتحان."</p>
                     <div class="testimonial-author">
                         <img src="images/avatar1.jpg" alt="محمد" loading="lazy">
                         <div><h4>محمد</h4><span>كلية العلوم الاقتصادية</span></div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote"><i class="fas fa-quote-right"></i></div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <i class="fas fa-quote-right quote"></i>
                     <p class="testimonial-text">"بدأت بشرح مادة dynamique، ولم أتوقع هذا الإقبال. بالإضافة إلى الفائدة العلمية، حصلت على دخل إضافي ساعدني في مصروفي الجامعي."</p>
                     <div class="testimonial-author">
                         <img src="images/avatar2.jpg" alt="سارة" loading="lazy">
-                        <div><h4>سارة</h4><span>كلية العلوم و التكنلوجيا</span></div>
+                        <div><h4>سارة</h4><span>كلية العلوم والتكنولوجيا</span></div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote"><i class="fas fa-quote-right"></i></div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <i class="fas fa-quote-right quote"></i>
                     <p class="testimonial-text">"فكرة رائعة تجمع الطلاب وتخلق روح التعاون الأكاديمي بدلاً من التنافس السلبي. أشعر أنني جزء من مجتمع يهتم بنجاح الجميع."</p>
                     <div class="testimonial-author">
-                        <img src="images/avatar3.jpg" alt="عبد اله" loading="lazy">
-                        <div><h4>عبد اله</h4><span>كلية الأدب واللغات</span></div>
+                        <img src="images/avatar3.jpg" alt="عبد الله" loading="lazy">
+                        <div><h4>عبد الله</h4><span>كلية الآداب واللغات</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="download" class="cta">
+    <!-- CTA Section -->
+    <section id="download">
         <div class="container">
-            <div class="cta-content">
-                <h2>انضم إلى آلاف الطلاب</h2>
-                <p>تطبيق واحد يوصلك بزملائك في الجامعة. اشرح، استفد، واكسب.</p>
-                <div class="cta-buttons">
-                    <a href="https://github.com/diaeddinehouari-source/unistep-landing/releases/download/v3.0/UniStep.apk" class="btn btn-light btn-large"><i class="fas fa-download"></i> حمّل التطبيق الآن</a>
+            <div class="cta reveal">
+                <div class="cta-content">
+                    <h2>انضم إلى آلاف الطلاب الآن</h2>
+                    <p>تطبيق واحد يوصلك بأفضل العقول في جامعتك. اشرح، استفد، واكسب بكل سهولة.</p>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/diaeddinehouari-source/unistep-landing/releases/download/v3.0/UniStep.apk" class="btn btn-white btn-large">
+                            <i class="fas fa-download"></i> حمّل التطبيق الآن
+                        </a>
+                    </div>
+                    <small style="display:block; margin-top:15px; opacity:0.8;">متوفر لأجهزة Android حالياً | الإصدار 3.0</small>
                 </div>
-                <small>متوفر لأجهزة Android حالياً</small>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid reveal">
                 <div class="footer-col">
                     <h3>UniStep</h3>
-                    <p>منصة طلاب جامعة غليزان لتبادل المعرفة الأكاديمية. نؤمن بأن أفضل تعليم هو ما يقدمه الزملاء لبعضهم.</p>
+                    <p>منصة طلاب جامعة غليزان لتبادل المعرفة الأكاديمية. نؤمن بأن أفضل تعليم هو ما يقدمه الزملاء لبعضهم لبعض بحب وتعاون.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61588629647375" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/unistep.app?igsh=MWlsbThnZ3MycjZqdQ==" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
@@ -217,61 +256,61 @@
                         <li><a href="#problem-solution">المشكلة والحل</a></li>
                         <li><a href="#features">المميزات</a></li>
                         <li><a href="#how-it-works">طريقة العمل</a></li>
-                        <li><a href="#testimonials">آراء الطلاب</a></li>
-                        <li><a href="#download">تحميل</a></li>
+                        <li><a href="#testimonials">الآراء</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>تواصل معنا</h4>
+                    <h4>تواصل معنا للاستفسار</h4>
                     <p><i class="fas fa-envelope"></i> unistep48@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +213 542 08 57 20</p>
+                    <p><i class="fas fa-map-marker-alt"></i> جامعة غليزان، الجزائر</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 UniStep – جميع الحقوق محفوظة. صُمم ب ❤️ لطلاب جامعة غليزان</p>
+            <div class="footer-bottom reveal reveal-delay-1">
+                <p>© 2026 UniStep – جميع الحقوق محفوظة. صُمم بـ ❤️ لطلاب جامعة غليزان</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
-        if (menuToggle && navMenu) {
-            menuToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-                const icon = menuToggle.querySelector('i');
-                if (navMenu.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    const icon = menuToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                });
-            });
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                    navMenu.classList.remove('active');
-                    const icon = menuToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
+        const closeMenu = document.getElementById('close-menu');
+        
+        function toggleMenu() {
+            navMenu.classList.toggle('active');
         }
+        
+        menuToggle.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Update active nav link on scroll
         const sections = document.querySelectorAll('section');
         const navItems = document.querySelectorAll('.nav-menu ul li a');
+        
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
+                const sectionTop = section.offsetTop - 150;
                 const sectionHeight = section.clientHeight;
                 if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
@@ -284,6 +323,8 @@
                 }
             });
         });
+
+        // Smooth Scrolling setup
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -295,15 +336,26 @@
                 }
             });
         });
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.background = '#ffffff';
-                navbar.style.boxShadow = 'none';
-            }
+
+        // Intersection Observer for Scroll Animations (The "reveal" classes)
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Trigger only once
+                }
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
         });
     </script>
 </body>
